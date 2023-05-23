@@ -6,6 +6,7 @@ import styles from '@/styles/Home.module.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ data }) {
+  console.log('ENV', process.env);
   return (
     <>
       <Head>
@@ -22,7 +23,7 @@ export default function Home({ data }) {
 }
 
 export const getServerSideProps = async () => {
-  const response = await fetch('http://localhost:3000/api/hello');
+  const response = await fetch(`https://test-v0.vercel.app/api/hello`);
   const result = await response.json();
 
   return {
