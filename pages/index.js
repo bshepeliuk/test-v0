@@ -6,7 +6,8 @@ import styles from '@/styles/Home.module.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home({ data }) {
-  console.log('ENV', process.env);
+  console.log('NEXT_PUBLIC_ENV', process.env.NEXT_PUBLIC_TEST);
+  console.log('WITHOUT_NEXT_PUBLIC_ENV', process.env.TEST);
   return (
     <>
       <Head>

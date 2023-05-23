@@ -1,4 +1,6 @@
 export default function Hello({ data }) {
+  console.log('NEXT_PUBLIC_ENV', process.env.NEXT_PUBLIC_TEST);
+  console.log('WITHOUT_NEXT_PUBLIC_ENV', process.env.TEST);
   return (
     <div>
       <h1>HELLO: {data.name}</h1>
